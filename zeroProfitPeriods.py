@@ -1,14 +1,18 @@
 def zeroProfitPeriods(transactions):
     transaction = 0
-    profit = 0
     counter = 0
-    for i in transactions:
-        print("the entry is " + str(i))
-        profit = profit + i
-        print("current profit is " + str(profit))
-        if profit == 0:
-            counter += 1
-            print("the current counter is " + str(counter))
+    profitTracker = 0
+    lengthOfTransactions = len(transactions)
+    while transaction <= (lengthOfTransactions - 1):
+        profit = 0
+        for item in transactions:
+            if item + profit == 0:
+                counter += 1
+            else:
+                profit = item + profit
+            transaction += 1
+
+    print(counter)
     return counter
 
 
