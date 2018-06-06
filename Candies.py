@@ -1,5 +1,6 @@
 def candies(n, m):
-    candiesEatenPerChild = n % m
+    candiesEatenPerChild = m % n
+    print(candiesEatenPerChild)
     return candiesEatenPerChild
 
 children = 3
