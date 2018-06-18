@@ -1,1 +1,2 @@
-
+def diagonalSegment(xy, length):
+    
