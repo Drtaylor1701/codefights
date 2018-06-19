@@ -8,11 +8,11 @@ def sortByHeight(a):
     sortedHeights = sorted(sortingArray)
     print(sortedHeights)
     aIndex = 0
-    sortedHeightsIndex = 0
     for item in sortedHeights:
         if a[aIndex] != -1:
             a[aIndex] = item
         aIndex += 1
+        print(a)
 
     return a
 
