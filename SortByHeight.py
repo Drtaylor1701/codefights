@@ -10,6 +10,7 @@ def sortByHeight(a):
     aIndex = 0
     for item in sortedHeights:
         if a[aIndex] != -1:
+            print("replacing " + str(item) + " with " + str(a[aIndex]))
             a[aIndex] = item
         aIndex += 1
         print(a)
