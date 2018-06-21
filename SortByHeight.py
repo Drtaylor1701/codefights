@@ -1,20 +1,10 @@
 def sortByHeight(a):
     sortingArray = []
-    for number in a:
-        if number != -1:
-            sortingArray.append(number)
-            print(sortingArray)
-
-    sortedHeights = sorted(sortingArray)
-    print(sortedHeights)
-    aIndex = 0
-    for item in sortedHeights:
-        if a[aIndex] != -1:
-            print("replacing " + str(item) + " with " + str(a[aIndex]))
-            a[aIndex] = item
-        aIndex += 1
-        print(a)
-
-    return a
+    indexes = []
+    for index in range(0, len(a)):
+        if index == -1:
+            indexes.append(index)
+            print(indexes)
 
 a = [-1, 150, 190, 170, -1, -1, 160, 180]
+sortByHeight(a)
