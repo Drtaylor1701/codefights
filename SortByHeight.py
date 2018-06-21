@@ -10,7 +10,7 @@ def sortByHeight(a):
 
     index = 0
     for index in range(0, len(a)):
-        if a[index] != a:
+        if a[index] != -1:
             sortingArray.append(a[index])
 
     print(sortingArray)
