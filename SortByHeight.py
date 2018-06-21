@@ -2,7 +2,8 @@ def sortByHeight(a):
     sortingArray = []
     indexes = []
     for index in range(0, len(a)):
-        if index == -1:
+        if a[index] == -1:
+            print(index)
             indexes.append(index)
 
     print(indexes)
