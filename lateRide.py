@@ -22,6 +22,8 @@ def lateRide(n):
     else:
         total = n[0]
         return total
+
+    print(n1, n2, n3, n4)
     #then I'll need to convert each digit back to int or float and add them
     n1 = int(n1)
     n2 = int(n2)
@@ -29,6 +31,7 @@ def lateRide(n):
     n4 = int(n4)
     total = n1 + n2 + n3 + n4
     #return the total
+    print(total)
     return total
     #also, this is a silly way to do anything and nobody would do this
 
