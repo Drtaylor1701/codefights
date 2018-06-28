@@ -7,6 +7,9 @@ def phoneCall(min1, min2_10, min11, s):
                 minutes += 1
                 s = s - min1
                 print(minutes, s)
+            minutes += 1
+            s = s - min2_10
+            print(minutes, s)
 
 
 min1 = 3
