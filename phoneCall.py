@@ -16,9 +16,9 @@ def phoneCall(min1, min2_10, min11, s):
     return minutes
 
 
-min1 = 3
-min2_10 = 1
-min11 = 2
-s = 20
+min1 = 2
+min2_10 = 2
+min11 = 1
+s = 2
 
 phoneCall(min1, min2_10, min11, s)
