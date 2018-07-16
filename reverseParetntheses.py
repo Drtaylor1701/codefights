@@ -1,23 +1,21 @@
 def reverseParentheses(s):
-    openParentheses = 0
+    parenthesesLocations = []
     index = 0
-    output = ""
-    while openParentheses == 0:
-        if s[index] == "(":
-            print(index)
-            openParentheses = 1
-        index += 1
-        print(index)
-
-    while openParentheses == 1:
-        if s[index] != "(" and s[index] != ")" and index <= len(s):
-            print(s[index])
-            output = output + s[index]
-            print(output)
-        elif s[index] == ")" and index <= len(s):
-            if ")" not in s[index:]:
-                openParentheses = 0
+    for letter in s:
+        if letter == "(" or letter == ")":
+            parenthesesLocations.append(index)
+            print(parenthesesLocations)
         index += 1
 
+    openClose = len(parenthesesLocations) / 2
+    openClose = int(openClose)
+    print(openClose)
+
+    open = parenthesesLocations[openClose]
+    close = parenthesesLocations[openClose + 1]
+    print(open, close)
+
+    middle = s[open:close]
+    print(middle)
 s = "a(bc)de"
 reverseParentheses(s)
