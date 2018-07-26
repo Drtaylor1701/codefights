@@ -1,21 +1,22 @@
+"""You have a string s that consists of English letters, punctuation marks, whitespace characters, and brackets. It is guaranteed that the parentheses in s form a regular bracket sequence.
+
+Your task is to reverse the strings contained in each pair of matching parentheses, starting from the innermost pair. The results string should not contain any parentheses.
+
+Example
+
+For string s = "a(bc)de", the output should be
+reverseParentheses(s) = "acbde"."""
+
+
 def reverseParentheses(s):
-    parenthesesLocations = []
-    index = 0
-    for letter in s:
-        if letter == "(" or letter == ")":
-            parenthesesLocations.append(index)
-            print(parenthesesLocations)
-        index += 1
+    for i in range(len(s)):
+        if s[i] == "(":
+            start = i
+        if s[i] == ")":
+            end = i
+            return reverseParentheses(s[:start] + s[start+1:end][::-1] + s[end+1:])
+        print(s)
+    return s
 
-    openClose = len(parenthesesLocations) / 2
-    openClose = int(openClose)
-    print(openClose)
-
-    open = parenthesesLocations[openClose]
-    close = parenthesesLocations[openClose + 1]
-    print(open, close)
-
-    middle = s[open:close]
-    print(middle)
 s = "a(bc)de"
 reverseParentheses(s)
